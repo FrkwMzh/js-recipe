@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ</title>
+  </head>
+  <body>
+    <h1>銀河系で一番大きい山は？</h1>
+    <button id="choice-1">富士山</button>
+    <button id="choice-2">エベレスト</button>
+    <button id="choice-3">オリンポス山</button>
+    <div id="display">選べ</div>
+  </body>
+
+  <script>
+    const choice1 = document.getElementById("choice-1")
+    const choice2 = document.getElementById("choice-2")
+    const choice3 = document.getElementById("choice-3")
+    const display = document.getElementById("display")
+
+    choice1.onclick = function () {
+      display.textContent = "残念だったな!"
+    }
+    choice2.onclick = function () {
+      display.textContent = "不正解!"
+    }
+    choice3.onclick = function () {
+      display.textContent = "正解!"
+    }
+  </script>
+</html>
