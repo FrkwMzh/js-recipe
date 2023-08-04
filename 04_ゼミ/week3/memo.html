@@ -16,10 +16,12 @@
 
       // 保存したメモを管理する配列をどこからでも使えるようにグローバルスコープで前言する
       let memos = []
-
+      const memosJson = localStorage.memos
+      memos = JSON.parse(memosJson)
       addButton.onclick = function () {
         // 略
         memos.push(memoInput.value)
+        localStorage.memos = JSON.stringify(memos)
         console.log(memos)
         memoContainer.textContent = ""
         for (let i = 0; i < memos.length; i++) {
